@@ -3,6 +3,7 @@ package com.wlk.retrofit_coroutine
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 
@@ -21,6 +22,19 @@ class MainActivity : AppCompatActivity() {
         viewModel.mProjectTreeLivaData.observe(this){
             for(i in it)
             Log.e("TAG",i.name)
+        }
+
+        viewModel.errorLivaData.observe(this){
+            Toast.makeText(this,it.toString(),Toast.LENGTH_SHORT).show()
+        }
+
+        viewModel.loadingLivaData.observe(this){
+            if(it){
+                //show loading
+            }else{
+                //dismiss loading
+
+            }
         }
 
     }
