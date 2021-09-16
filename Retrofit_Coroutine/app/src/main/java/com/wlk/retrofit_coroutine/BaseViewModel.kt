@@ -10,9 +10,9 @@ import java.lang.Exception
 open class BaseViewModel: ViewModel() {
 
     // 网络错误
-    val errorLivaData = MutableLiveData<Throwable>()
+    val errorLivaData = SingleLiveData<Throwable>()
     // 正在加载
-    val loadingLivaData = MutableLiveData<Boolean>()
+    val loadingLivaData = SingleLiveData<Boolean>()
 
     fun launch(
         block: suspend() -> Unit,
