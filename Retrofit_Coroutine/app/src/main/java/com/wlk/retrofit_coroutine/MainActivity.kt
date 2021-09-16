@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
         viewModel.mProjectTreeLivaData.observe(this){
             for(i in it)
             Log.e("TAG",i.name)
-            Log.e("TAG",i.name)
         }
 
     }
