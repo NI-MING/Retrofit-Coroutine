@@ -9,6 +9,7 @@ import java.lang.Exception
 
 open class BaseViewModel: ViewModel() {
 
+
     // 网络错误
     val errorLivaData = SingleLiveData<Throwable>()
     // 正在加载
