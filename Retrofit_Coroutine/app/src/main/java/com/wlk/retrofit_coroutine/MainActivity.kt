@@ -20,18 +20,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         viewModel.getProjectTree()
-        val intent = Intent()
-        intent.data
-
-
-
-
-
-
-
-
-
-
         viewModel.mProjectTreeLivaData.observe(this){
             for(i in it)
             Log.e("TAG",i.name)
